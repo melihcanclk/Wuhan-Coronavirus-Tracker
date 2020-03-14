@@ -5,7 +5,6 @@ public class LoadModel {
     private String country;
     private String lastRecord;
     private int diffFromPrevDay;
-    private int totalRecord;
 
     public String getState() {
         return state;
@@ -43,14 +42,6 @@ public class LoadModel {
         this.diffFromPrevDay = diffFromPrevDay;
     }
 
-
-    public int getTotalRecord() {
-        return totalRecord;
-    }
-
-    public void setTotalRecord(int totalRecord) {
-        this.totalRecord = totalRecord;
-    }
 
     @Override
     public String toString() {

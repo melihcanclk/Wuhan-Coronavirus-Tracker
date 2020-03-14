@@ -43,14 +43,6 @@ public class CoronaVirusService {
             int last = Integer.parseInt(record.get(record.size() + minus));
             int prev = Integer.parseInt(record.get(record.size() + minus - 1));
             loadModel.setDiffFromPrevDay(last - prev);
-
-            int sum = 0;
-            for (int i = 4; i<record.size(); ++i){
-                int a = Integer.parseInt(record.get(i));
-                sum += a;
-            }
-            loadModel.setTotalRecord(sum);
-
             newModels.add(loadModel);
         }
         this.allModels = newModels;
