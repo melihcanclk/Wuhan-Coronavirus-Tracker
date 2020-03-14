@@ -18,14 +18,12 @@ public class HomePageController {
     @GetMapping("/")
     public String homePage( Model model) {
         List<LoadModel> allStats = coronaVirusService.getAllModels();
-        int totalCases = 0;
-        for (LoadModel stat : allStats) {
-            int lastRecord = stat.getLastRecord();
-            totalCases += lastRecord;
-        }
+        int totalCases = allStats.stream().mapToInt(stat -> stat.getLastRecord()).sum();
         model.addAttribute("stats", allStats);
         model.addAttribute("totalCases", totalCases);
 
         return "home";
     }
+
+
 }

@@ -23,6 +23,7 @@
                 <th> State </th>
                 <th> Country </th>
                 <th> Last Cases Reported</th>
+                <th> Total Case Records of Related Country </th>
                 <th> Change from Yesterday </th>
             </tr>
         </thead>
@@ -31,7 +32,9 @@
                 <td><span th:text="${stat.state}"></span></td>
                 <td><span th:text="${stat.country}"></span></td>
                 <td><span th:text="${stat.lastRecord}">0</span></td>
+                <td><span th:text="${stat.totalRecord}">0</span></td>
                 <td><span th:text="${stat.diffFromPrevDay}">0</span></td>
+
             </tr>
         </tbody>
     </table>
